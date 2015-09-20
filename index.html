@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+  <meta charset="utf-8" />
+	<title>Maps App</title>
+  <style type="text/css">@import url(http://fonts.googleapis.com/css?family=Open+Sans);</style>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+  <div class="way-box center-block" id="way-box">
+   <form>
+    <fieldset class="way">
+        <h1>Trajeto</h1>
+        <p>Adicione os pontos do trajeto (Máximo 7 pontos).</p>
+
+      <ul class="points">
+        <li><input class="location way-input center-block" type="text" id="start" name="start" placeholder="Partida"></li>
+        <li><input class="location point way-input margin-top_small center-block" type="text" id="end" name="end" placeholder="Final"></li>
+        <input type="hidden" id="txtLat" name="txtLat" />
+        <input type="hidden" id="txtLong" name="txtLong" />
+      </ul>
+
+      <div class="controlers center-block margin-top_small">
+        <button class="btn-send inline-block" type="submit" id="btnSend" name="btnSend">Pesquisar</button>
+        <button class="btn-add" id="btnAddPoint" name="btnAddPoint">Adicionar um ponto</button>
+      </div>
+    </fieldset>
+  </form>
+</div>
+<div class="hidden box-show-search" id="BoxShowSearch">
+  <button id="btnShowSearchBox">Mostrar caixa de busca</button>
+</div>
+<div class="map_canvas" id="map"></div>
+<div class="way-steps" id="way-steps">
+</div>
+<!-- JS -->
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<!-- <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDyec1oORxUTP_DvfIoKYe112raZdGXzFU&sensor=false"></script> -->
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="vendor/jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
+</body>
+</html>
